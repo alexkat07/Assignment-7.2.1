@@ -18,9 +18,9 @@ namespace Assignment_7._2._1
             {
                 if (vowelDict.ContainsKey(s[l].ToString()) && vowelDict.ContainsKey(s[r].ToString()))
                 {
-                    char temp = s[l];
-                    s = s.Remove(l, 1).Insert(l, s[r].ToString());
-                    s = s.Remove(r, 1).Insert(r, temp.ToString());
+                    char temp = s[l]; // Store the character at index i in a temporary variable
+                    s = s.Remove(l, 1).Insert(l, s[r].ToString()); // Remove character at index l and insert the character at index r into index l
+                    s = s.Remove(r, 1).Insert(r, temp.ToString()); // Remove character at index r and replace it with temp
                     l++;
                     r--;
 
